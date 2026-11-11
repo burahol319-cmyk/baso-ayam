@@ -26,11 +26,8 @@ public class MainActivity extends Activity {
         super.onCreate(b);
         final WebViewAssetLoader loader = new WebViewAssetLoader.Builder()
             .setDomain("appassets.androidplatform.net")
-            .addPathHandler("/", new WebViewAssetLoader.AssetsPathHandler(this) {
-                @Override public WebResourceResponse handle(String path) {
-                    return super.handle("www/" + (path.isEmpty() ? "index.html" : path));
-                }
-            }).build();
+                       .addPathHandler("/", new WebViewAssetLoader.AssetsPathHandler(this))
+            .build();
 
         web = new WebView(this);
         setContentView(web);
@@ -70,7 +67,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        if (b == null) web.loadUrl(HOST + "/index.html"); else web.restoreState(b);
+        if (b == null) web.loadUrl(HOST + "/www/index.html"); else web.restoreState(b);
     }
 
     class Bridge {
