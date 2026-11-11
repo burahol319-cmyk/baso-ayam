@@ -1,0 +1,8 @@
+CARA DAPAT APK (tanpa install apa-apa di laptop):
+1. Buat repo baru (private juga boleh) di github.com
+2. Upload SEMUA isi folder ini (termasuk folder .github) ke repo itu
+3. Buka tab "Actions" -> workflow "Build APK" jalan otomatis (+/- 3-5 menit)
+4. Klik run yang hijau -> bagian Artifacts -> download "BasoSaluyu-apk" (zip) -> ekstrak -> app-debug.apk
+5. Kirim ke HP, buka, izinkan "install dari sumber tidak dikenal", install.
+
+ATAU: buka folder ini di Android Studio -> Build > Build APK(s).
